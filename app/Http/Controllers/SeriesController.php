@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Http\Requests\SeriesFormRequest;
 use App\Models\Episode;
 use App\Models\Season;
 use App\Models\Series;
+=======
+use App\Models\Serie;
+use Illuminate\Http\Request;
+>>>>>>> b7ae6bb (removendo espaços em brancos)
 
 class SeriesController extends Controller
 {
