@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SeasonsController;
 use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\UserController;
+use App\Mail\SeriesCreated;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,3 +51,7 @@ Route::get('/register', [UserController::class, 'create'])
 
 Route::post('/register', [UserController::class, 'store'])
     ->name('user.store');
+
+Route::get('/email', function () {
+    return new SeriesCreated('Teste', 9, 5, 10);
+});
